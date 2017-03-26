@@ -10,10 +10,9 @@
             <div class="row">
                 <h2>Sign Up</h2>
                 
-                <?php echo $__env->yieldContent('errormessage'); ?>
-                
             </div>
-            <div class="row">
+            <div class="row thin-row">
+                <?php echo $__env->yieldContent('errormessage'); ?>
                 <form id="registerform" name="registerform" class="register-form"
                     action="/register" method="post">
                     <div class="row">
@@ -98,7 +97,7 @@
                         <div class="col span-2-of-3">
                             <div class="form-group">
                                 <input type="file" id="exampleInputFile">
-                                <p class="help-block">Example block-level help text here.</p>
+                                <p class="help-block"></p>
                             </div>
                         </div>
                     </div>
@@ -124,6 +123,7 @@
         <script>
 
             $(document).ready(function() {
+                
                $("#registerform").validate({
                    rules: {
                        email2: {

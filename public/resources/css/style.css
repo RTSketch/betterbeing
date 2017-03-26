@@ -44,6 +44,8 @@ body {
     visibility: hidden;
 }
 
+
+
 /* ------------------------------------------------- */
 /* -----------------LIGHT-CUSTOMIZED---------------- */
 /* ------------------------------------------------- */
@@ -1383,6 +1385,39 @@ input[type=checkbox]{
 }
 
 *:focus {outline: none;}
+
+.error{
+    font-size: 70%;
+    color: red;
+    font-family: 'arial';
+    font-weight: 800px;
+}
+
+.register-form .col{ 
+    font-size:80%;
+}
+
+.register-form .col.span-1-of-3{
+    margin-top: 7px;
+}
+
+.register-form .row {
+    margin-top: 10px
+}
+
+.thin-row {
+    width: 600px;
+}
+
+.register-form input[type=text],
+input[type=email],
+input[type=password],
+#find-us
+{
+    font-size: 13px;
+    height: 30px;
+
+}
 
 /* ------------------------------------------------- */
 /* -------------------LOGIN-FORM-------------------- */

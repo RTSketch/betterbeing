@@ -33,9 +33,10 @@ class RegisterController extends BaseController
         
         if (sizeof($errors) > 0)
         {
-            //$_SESSION['msg'] = $errors;
-            //header ("Location: /register");
-            echo $this->twig->render('register.html', ['errors' => $errors]);
+            $_SESSION['msg'] = $errors;
+           // echo $this->twig->render('register.html', ['errors' => $errors]);
+            echo Blade::render("register");
+            unset($_SESSION['msg']);
             exit();
         }
         

@@ -55,7 +55,7 @@ class Validator
                     }
                 }
             } else {
-                $errors[] = "No value found!";
+
             }
         }
         return $errors;

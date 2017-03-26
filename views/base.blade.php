@@ -95,6 +95,7 @@
         <span id="tooltip_menu">
             <form method="post" action="#" class="login-form">
                     <div class="row">
+
                             <label for="">Username</label>
                             <input type="text" name="login-username" id="login-username" placeholder="" required>
                     </div>
@@ -197,6 +198,13 @@
     </header>
 
     <div class="container">
+        
+        <div class="container">
+        
+            @include('errormessage')
+        
+        </div>
+
         
         @yield('content')
         
