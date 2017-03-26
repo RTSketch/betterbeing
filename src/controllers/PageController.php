@@ -11,9 +11,14 @@ class PageController extends BaseController
         echo Blade::render("home");
     }
 
-    public function getShowRegisterPage()
+//    public function getShowRegisterPage()
+//    {
+//        echo Blade::render("register");
+//    }
+    
+    public function getShowPage()
     {
-        echo Blade::render("register");
+        echo "foo!";
     }
     
 }

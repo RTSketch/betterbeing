@@ -13,7 +13,8 @@
         "altorouter/altorouter": "1.1.0",
         "respect/validation": "^1.1",
         "twig/twig": "^2.0",
-        "duncan3dc/blade": "3.4.*"
+        "duncan3dc/blade": "3.4.*",
+        "robmorgan/phinx": "0.4.4"
     },
     "autoload": {
         "psr-4": {"BetterBeing\\": "src/" }
