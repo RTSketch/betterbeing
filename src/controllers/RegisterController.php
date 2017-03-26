@@ -18,6 +18,7 @@ class RegisterController extends BaseController
         $errors = [];
         
         $validation_data = [
+            'username' => 'length:1',
             'firstname' => 'length:1',
             'surname' => 'length:1',
             'email1' => 'email|equalTo:email2',
@@ -45,6 +46,7 @@ class RegisterController extends BaseController
         
         // save this data into a database
         $user = new User;
+        $user->username = $_REQUEST['username'];
         $user->first_name = $_REQUEST['firstname'];
         $user->last_name = $_REQUEST['surname'];
         $user->email = $_REQUEST['email1'];
