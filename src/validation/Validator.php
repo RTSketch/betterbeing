@@ -12,6 +12,8 @@ class Validator
         $errors = [];
         
         foreach ($validation_data as $name => $value) {
+            
+            // getting array ['first_name' => 'min:3', 'last_name' => 'min:3']
             if (isset($_REQUEST[$name])) {
                 
                 $rules = explode("|", $value);

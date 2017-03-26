@@ -2,12 +2,13 @@
 namespace BetterBeing\Controllers;
 
 //use Respect\Validation\Validator as Validator;
-use BetterBeing\Validation\Validator;
+//use BetterBeing\Validation\Validator;
+use duncan3dc\Laravel\BladeInstance;
 
 class BaseController
 {
 
-    protected $loader;
+    /* protected $loader;
     protected $twig;
     
     public function __construct()
@@ -17,5 +18,12 @@ class BaseController
             'cache' => false, 'debug' => true
         ]);
     }
+    */
     
+    protected $blade;
+    
+    public function __contsruct()
+    {
+        $this->blade = new BladeInstance("/vagrant/views", "/vagrant/cache/views");
+    }
 }
