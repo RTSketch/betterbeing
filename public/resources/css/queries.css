@@ -4,6 +4,14 @@
     .badge-small{
         font-size: 2.15vw;
     }
+    
+    .menulisthide{
+        list-style: none;
+        width: 200px;
+        float:right;
+        margin-left: 0px;
+        right: 0;
+    }
 
 }
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
@@ -40,7 +48,7 @@
     }
     
     .main-nav li a{
-        padding-bottom: 5px;
+        /padding-bottom: 5px;
     }
 
     
@@ -67,12 +75,12 @@
     
     .sticky {
         position: fixed;
-        width: 100%;
+/*        width: 100%;*/
         height: 51px;
         
         border-bottom: 2px solid #fff;
         color: #fff;
-        z-index: 99 !important;
+/*        z-index: 2 !important;*/
     }
 
     .sticky .logo {
@@ -125,6 +133,25 @@
     .sticky .social-links{
         display: none;
     }
+
+    
+    .sticky label.menu{
+        
+    padding-top:10px;
+    }
+    
+    #menu-expand.menu{
+            transform: translate(-10px, 45px);
+    }
+    
+    .sticky #menu-expand.menu{
+        transform: translate(-10px, 40px);
+    }
+    
+    .menulisthide{
+        height: 0;
+        border: none;
+    }
     
     
 }
@@ -137,11 +164,13 @@
     }
     
     .sticky.hide-navigation {
-        display:fixed;
+        position:fixed;
         top: 50px;
         height: 51px;
         border-bottom: 0px solid #fff;
+/*        z-index:0;*/
     }
+    
     
     .summary-extended.section-summary{
         padding-top: 113px;
@@ -163,6 +192,8 @@
     .sticky .logo-and-title{
         
     }
+    
+
 }
 
 /* Small phones to small tablets: from 481 to 787px */
@@ -186,6 +217,7 @@
         transform: translate(-50%,40px);
         border-top: 1px solid #ffffff;
         border-bottom: 1px solid #ffffff;
+        height: 34px;
     }
     
     .main-nav-sticky{
@@ -232,6 +264,7 @@
         display: flex;
         width: 25%;
         float: left;
+
 
     }
     
@@ -307,26 +340,21 @@
     
 
     
-    .main-nav{
-        /-webkit-transform: translate(-50%,0px);
-        /transform: translate(-50%,0px);
-        /margin-top: 40px;
 
-        height: 35px;
-    }
     
     .main-nav li{
-        margin-top: 8px;
         width: 25%;
     }
     
     .main-nav li a{
-        padding-bottom: 2.5px;
+        /padding-bottom: 2.5px;
         width: 100%;
         height: 90%;
 
                 display: flex;
         justify-content: center;
+                        padding-top: 8px;
+                        padding-bottom: 6px;
     }
     
     .main-nav-sticky{
@@ -351,12 +379,12 @@
     .sticky {
         position: fixed;
         
-        width: 100%;
+/*        width: 100%;*/
         height: 170px;
         background-color: #3dd98b;
         border-bottom: 2px solid #fff;
         color: #fff;
-        z-index: 99 !important;
+/*        z-index: 2 !important;*/
     }
 
     .sticky .logo {
@@ -415,29 +443,63 @@
     }
     
     .hide-navigation {
-        display:inherit;
-        
     }
     
     .sticky.hide-navigation {
-        display:fixed;
+        position:fixed;
         top: 169px;
         height: 51px;
         border-bottom: 0px solid #fff;
+/*        z-index: 0;*/
     }
     
     .sticky .hide-navigation-dropdown {
-        display:fixed;
         top: 169px;
         height: 51px;
         border-bottom: 0px solid #fff;
+/*        z-index: 0;*/
     }
     
     .summary-extended.section-summary{
         padding-top: 113px;
     }
     
+    .menuwhite{
+        width: 100%;
+        height: 33px;
 
+        padding: 0;
+                        display: flex;
+        justify-content: center;
+                transform: translate(-10px,0px);
+    }
+    
+    label.menu{
+        
+        padding: 0;
+        margin-top: -1px;
+        padding-top: 8px;
+                display: flex;
+        justify-content: center;
+    }
+    
+    .sticky label.menu {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding-bottom: 24px;
+    }
+    
+    #menu-expand.menu{
+        transform: translate(-10px, 138px);
+    }
+    
+    .sticky #menu-expand.menu{
+        transform: translate(-10px, 156px);
+    }
+    .menulisthide{
+        height: 0;
+        border: none;
+    }
     
 }
 @media only screen and (max-width: 480px){
@@ -475,7 +537,7 @@
     .main-nav{
         width: 100%;
         margin-right: 0px;
-        height: 63px;
+        height: 75px;
     }
     
     .main-nav li{
@@ -489,6 +551,7 @@
     }
 
     .main-nav-sticky{
+        display: none;
         width: 100%;
         margin-right: 0px;
         height: 63px;
@@ -529,29 +592,29 @@
     }
     
     .sticky .main-nav {
-        display: none;
-        margin-top: 39px;
-        padding-top: 12px;
+
+
+
         height: 10px;
         
     }
     
     .sticky .main-nav-sticky {
-        margin-top: 49px;
+
         padding-top: 12px;
         height: 10px;
         
     }
     
     .sticky.hide-navigation {
-        display:none;
-        top: 91px;
-        height: 36px;
+        top: 44px;
+        height: 43px;
 
         border-bottom: 0px solid #fff;
         font-size: 15px;
     }
     
+/*
     .sticky .hide-navigation-dropdown {
         display: block;
         top: 0px;
@@ -560,6 +623,7 @@
         border-bottom: 0px solid #fff;
         font-size: 15px;
     }
+*/
     
     .sticky .navigation {
         padding-top: 13px;
@@ -580,7 +644,7 @@
         font-size: 15px;
     }
     .sticky .main-nav li a{
-        margin: 0;
+        display: none;
     }
     
     .sticky .main-nav-sticky li{
@@ -604,6 +668,7 @@
         
     }
     
+/*
     .sticky .mobile-nav-icon {
         display: inline-block;
         margin: 0;
@@ -612,6 +677,7 @@
         font-size: 100%;
         
     }
+*/
     
         
     .sticky .logo-and-title {
@@ -631,7 +697,7 @@
     }
     
     .sticky .logo-text a{
-        margin-top: 14px;
+        margin-top: 9px;
         margin-left: 14px;
         font-size: 150%;
         -webkit-transform: translate(0,-3px);
@@ -671,11 +737,45 @@
     #expand-nav-dropdown.navigation{
         padding-bottom: 0px;
     }
+    
+    .sticky label.menu {
+        transform: translate(0,-52px);
+        margin-right: 0;
+    }
+    
+    #menu-expand.menu{
+        transform: translate(-10px, 173px);
+    }
+    
+    .sticky #menu-expand.menu{
+        transform: translate(-10px, 42px);
+    }
+    .menulisthide{
+        height: 0;
+        border: none;
+    }
+    
+    .menuwhite{
+        width: 100%;
+
+    }
+    
+    label.menu {
+        float: right;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 342px){
+    
+    .sticky .logo-text{
+        font-size: 5.7vw;
+    }
 }
 
 /* Small phones: from 0 to 767px */
 @media only screen and (max-device-width: 767px) and (orientation : landscape){
-    h1 {
+     h1 {
         height: 20px;
         font-size: 100%;
         letter-spacing: 0.15px;
@@ -695,13 +795,19 @@
     }
     
     .hero-text-box {
-        margin-top: 20px;
+        /padding-top: 20px;
+        margin-top: 40px;
+        
+    }
+
+    .two-buttons-container {
+        margin-top: 50px;
     }
     
     .main-nav{
         width: 100%;
         margin-right: 0px;
-        height: 63px;
+        height: 75px;
     }
     
     .main-nav li{
@@ -715,6 +821,7 @@
     }
 
     .main-nav-sticky{
+        display: none;
         width: 100%;
         margin-right: 0px;
         height: 63px;
@@ -755,29 +862,29 @@
     }
     
     .sticky .main-nav {
-        display: none;
-        margin-top: 39px;
-        padding-top: 12px;
+
+
+
         height: 10px;
         
     }
     
     .sticky .main-nav-sticky {
-        margin-top: 49px;
+
         padding-top: 12px;
         height: 10px;
         
     }
     
     .sticky.hide-navigation {
-        display:none;
-        top: 91px;
-        height: 36px;
+        top: 44px;
+        height: 43px;
 
         border-bottom: 0px solid #fff;
         font-size: 15px;
     }
     
+/*
     .sticky .hide-navigation-dropdown {
         display: block;
         top: 0px;
@@ -786,6 +893,7 @@
         border-bottom: 0px solid #fff;
         font-size: 15px;
     }
+*/
     
     .sticky .navigation {
         padding-top: 13px;
@@ -806,7 +914,7 @@
         font-size: 15px;
     }
     .sticky .main-nav li a{
-        margin: 0;
+        display: none;
     }
     
     .sticky .main-nav-sticky li{
@@ -830,6 +938,7 @@
         
     }
     
+/*
     .sticky .mobile-nav-icon {
         display: inline-block;
         margin: 0;
@@ -838,6 +947,7 @@
         font-size: 100%;
         
     }
+*/
     
         
     .sticky .logo-and-title {
@@ -857,7 +967,7 @@
     }
     
     .sticky .logo-text a{
-        margin-top: 14px;
+        margin-top: 9px;
         margin-left: 14px;
         font-size: 150%;
         -webkit-transform: translate(0,-3px);
@@ -896,6 +1006,33 @@
     
     #expand-nav-dropdown.navigation{
         padding-bottom: 0px;
+    }
+    
+    .sticky label.menu {
+        transform: translate(0,-52px);
+        margin-right: 0;
+    }
+    
+    #menu-expand.menu{
+        transform: translate(-10px, 173px);
+    }
+    
+    .sticky #menu-expand.menu{
+        transform: translate(-10px, 42px);
+    }
+    .menulisthide{
+        height: 0;
+        border: none;
+    }
+    
+    .menuwhite{
+        width: 100%;
+
+    }
+    
+    label.menu {
+        float: right;
+        width: 100%;
     }
     
 }

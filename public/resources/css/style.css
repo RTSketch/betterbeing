@@ -19,7 +19,7 @@
 
 
 html {
-    
+    position: relative;
     background-color: #fff;
     color: #555555;
     font-family: 'Overpass', 'Arial', sans-serif;
@@ -32,7 +32,7 @@ html {
 
 body {
 
-    min-height: 100%;
+    margin-bottom: 60px;
 }
 
 .clearfix {zoom: 1}
@@ -56,18 +56,21 @@ body {
 	border-radius: 23px;
     transform: translate(0,2px);
     overflow: hidden;
-    z-index: 0;
     
 }
 
 .tooltipster-sidetip.tooltipster-light-customized.tooltipster-bottom .tooltipster-arrow-background {
     border-bottom-color: #3dd98b;
     top: 5px;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized.tooltipster-bottom .tooltipster-arrow-border {
     border-bottom-color: #3dd98b;
     top: 0px;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized .tooltipster-content {
@@ -86,6 +89,8 @@ body {
 .tooltipster-sidetip.tooltipster-light-customized .tooltipster-content p{
     margin: 10px;
     font-weight: 800;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized .tooltipster-content p2{
@@ -97,6 +102,8 @@ body {
     padding-top: 10px;
     height: 80px;
     /margin: 10px;
+        z-index: 0;
+
 }
 
 /* ------------------------------------------------- */
@@ -116,11 +123,15 @@ body {
 .tooltipster-sidetip.tooltipster-light-customized-menu.tooltipster-bottom .tooltipster-arrow-background {
     border-bottom-color: #3e3e3e;
     top: 0px;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized-menu.tooltipster-bottom .tooltipster-arrow-border {
     border-bottom-color: #3dd98b;
     top: 0px;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized-menu .tooltipster-content {
@@ -134,11 +145,15 @@ body {
     display: flex;
     justify-content: center;
     color: #1c1c1c;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized-menu .tooltipster-content p{
     margin: 10px;
     font-weight: 800;
+        z-index: 0;
+
 }
 
 .tooltipster-sidetip.tooltipster-light-customized-menu .tooltipster-content p2{
@@ -150,10 +165,13 @@ body {
     padding-top: 10px;
     height: 80px;
     /margin: 10px;
+        z-index: 0;
+
 }
 
 .tooltip_templates {
     display: none;
+    z-index: 0;
 
 }
 
@@ -469,6 +487,14 @@ input[type=submit] {
     
 }
 
+#fixbutton:hover,
+#fixbutton:active
+{
+    background-color: #2751ff;
+    color: #fff;
+    
+}
+
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
@@ -538,8 +564,8 @@ input[type=submit]:active
     /-webkit-box-shadow: inset 0px 0px 0px 2px #3dd98b;
     /-moz-box-shadow: inset 0px 0px 0px 2px #3dd98b;
     /box-shadow: inset 0px 0px 0px 2px #3dd98b;
-    transition: font-size 0.1s;
-    transform: translate(0%, 0%) scale(1.6);
+    
+    transform: scale(1.5);
     color: #3dd98b;
     transition: transform 0.2s;
 }
@@ -635,9 +661,9 @@ header {
 /* ------------------------------------------------- */
 
 .main-nav {
-    
-    /margin-top: 15px;
-    margin-right: 20px;
+
+    margin-right: 10px;
+
     float: right;
     list-style: none;
     
@@ -645,7 +671,7 @@ header {
 
 .main-nav-sticky {
     display:none;
-    /margin-top: 15px;
+
     margin-right: 20px;
     float: right;
     list-style: none;
@@ -659,12 +685,17 @@ header {
 .main-nav li{
     display: inline-block;
     margin-top: 20px;
-    margin-left:20px;
-}
+    margin-right: 10px;
+    margin-left: 10px;
 
+}
+.main-nav li a{
+
+    
+}
 .main-nav li a:link,
 .main-nav li a:visited{
-    /padding: 4px 0;
+
     color: #fff;
 
     text-decoration: none;
@@ -712,8 +743,11 @@ header {
     display: block;
     float: left;
     width: 100%;
+/*    z-index:4 !important;*/
+}
 
-    
+.sticky.nav-bar-full {
+/*    z-index:4 !important;*/
 }
 
 .main-nav .social-links {
@@ -754,13 +788,14 @@ header {
 /* ------------------------------------------------- */
 
     .sticky {
+
         position: fixed;
         width: 100%;
         height: 60px;
         background-color: #3dd98b;
         border-bottom: 2px solid #d4d4d4;
         color: #fff;
-        z-index: 99 !important;
+        z-index: 2 !important;
     }
 
     .sticky .logo {
@@ -785,7 +820,7 @@ header {
     }
 
     .sticky .main-nav {
-        
+
         margin-top: 7px;
         background-color: #3dd98b;
         padding-bottom: 34px;
@@ -794,9 +829,11 @@ header {
         border: 0px solid #fff;
         border-top: 0px solid #fff;
         height: 20px;
+
     }
 
     .sticky .main-nav-sticky {
+        
         background-color: #3dd98b;
         padding-bottom: 34px;
         margin-left: 0;
@@ -804,6 +841,7 @@ header {
         border: 0px solid #fff;
         border-top: 0px solid #fff;
         height: 20px;
+
 
     }
     .sticky .main-nav li {
@@ -845,11 +883,11 @@ header {
     }
 
     .sticky .hide-navigation {
-        position: fixed;
+        position: relative;
 
         margin-top: 0px;
         width: 100%;
-        z-index: 99 !important;
+
     }
 
     .sticky .hide-navigation-dropdown {
@@ -858,7 +896,7 @@ header {
         white-space: nowrap;
         margin-top: 90px;
         width: 100%;
-        z-index: 99 !important;
+/*        z-index: 2 !important;*/
     }
 
 
@@ -1327,10 +1365,7 @@ padding-top: 60px;
 
 
 .btn-app img{
-    
     height: 50px;
-
-    
 }
 
 /* ------------------------------------------------- */
@@ -1350,7 +1385,7 @@ padding-top: 60px;
 }
 
 .contact-form {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1371,6 +1406,7 @@ select,
 textarea {
     width: 100%;
     padding: 7px;
+    margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid #cecece;
 }
@@ -1401,12 +1437,21 @@ input[type=checkbox]{
     margin-top: 7px;
 }
 
-.register-form .row {
+.register-form{
+    width: 80%;
     margin-top: 10px
 }
 
 .thin-row {
-    width: 600px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.medium-row {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
 }
 
 .register-form input[type=text],
@@ -1417,6 +1462,12 @@ input[type=password],
     font-size: 13px;
     height: 30px;
 
+}
+
+textarea{
+    font-size: 13px;
+    height: 200px;
+    line-height: 24px;
 }
 
 /* ------------------------------------------------- */
@@ -1464,10 +1515,6 @@ textarea {
     border: 1px solid #cecece;
 }
 
-textarea {
-    height: 100px;
-}
-
 input[type=checkbox]{
     transform: translate(4px, 0px)scale(1.5);
     margin: 10px 5px 10px 0;
@@ -1487,6 +1534,9 @@ body {
 footer {
     background-color: #3dd98b;
     width: 100%;
+    
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-bar {
@@ -1755,10 +1805,257 @@ p.shine-small
 }
 
 /* ------------------------------------------------- */
-/* ----------------------tooltip---------------------- */
+/* ----------------------POST----------------------- */
 /* ------------------------------------------------- */
 
+.user-post{
+    padding-top: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 10px #888888;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 40px;
+}
 
+.user-post h2{
+    font-size: 120%;
+}
+
+.user-post h2:after {
+    height: 0px;
+}
+
+.user-post p{
+    font-size: 80%;
+    color: #7b7b7b;
+}
+
+.post-image{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.post-time{
+    margin-left: 5%;
+}
+
+/* ------------------------------------------------- */
+/* --------------------USER-MENU-------------------- */
+/* ------------------------------------------------- */
+
+.menu{
+    z-index: 9999999 !important;
+    
+    width: 200px;
+
+}
+
+.menuwhite{
+    position: relative;
+    display: inline-block;
+
+    background: #3dd98b;    
+    color: #ffffff;
+
+
+
+    padding-bottom: 6px;
+
+}
+
+.menuwhite li{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.menuhide{
+    display: none;
+    
+}
+
+.menurow{
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+.sticky .menurow{
+/*    padding-left: calc(100%-1340px);*/
+
+}
+
+.menulisthide{
+    list-style: none;
+
+    height: 0px;
+    border: none;
+    margin-left: 1140px;
+
+
+    
+}
+
+.sticky.menulisthide{
+
+    list-style: none;
+
+    z-index: 999 !important;
+    
+
+
+}
+
+.sticky .menu{
+
+    z-index: 999 !important;
+}
+
+input.menu{
+  display: none;
+  visibility: hidden;
+    
+}
+
+
+label.menu{
+
+
+    padding: 40px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-size: 90%;
+    border: 2px solid #fff;
+        border-radius: 5px;
+    
+}
+        transform: translate(0,10px);
+label.menu:hover {
+
+}
+label.menu::before {
+    font-family: "Ionicons";
+    /content: "\f364";
+    font-weight: 400px;
+    font-size: 30px;
+    transform: translate(0,-50%);
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    width:40px;
+    height: 20px;
+    padding-top: 0px;
+    top: 10px;
+}
+
+#menu-expand.menu{
+    position: absolute;
+    max-height:350px;
+    background: #e2e2e2;
+    color: #3b3b3b;
+    overflow:hidden;
+    transition: max-height 0.5s ease-in-out;
+/*    z-index: 100 !important;*/
+
+    border-radius: 5px;
+            transform: translate(-10px, 48px);
+
+
+}
+
+.sticky #menu-expand.menu{
+/*    /transform: translate(-210px, 48px);*/
+
+}
+
+.menu .row {
+
+        margin-top: 0px;
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.menu a{
+    font-size: 15px;
+    width: 100%;
+    position: relative;
+    border-left: 2px solid #e2e2e2;
+    border-right: 2px solid #fff;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.menu span{
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+#menu-toggle:checked ~ #menu-expand {
+  max-height: 0px;
+}
+#menu-toggle:checked ~ label.menu::before {
+  /content: "\f35e";
+}
+
+.menu-content {
+
+    text-align: center;
+
+}
+
+.sticky .menu-content {
+    width: 250px;
+}
+
+.menu-content i{
+    
+    font-size: 90px;
+    margin: 5px;
+    
+}
+
+.menu-content p{
+    
+    padding-top: 20px;
+    
+}
+
+.menu-content p2{
+    
+    font-size: 60px;
+    
+}
+
+.menu-btn:link,
+.menu-btn:visited,
+input[type=submit]{
+    color: #7e7e7e;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    
+}
+
+.menu-btn span {
+    position: relative;
+    top: 2px;
+    text-decoration: none;
+}
+
+.menu-btn:hover,
+.menu-btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #2751ff;
+    color: #fff;
+    
+}
 
 /* ------------------------------------------------- */
 /* -------------------BADGES-TEST------------------- */

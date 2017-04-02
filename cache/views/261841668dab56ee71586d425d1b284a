@@ -1,0 +1,32 @@
+
+
+<?php $__env->startSection('browsertitle'); ?>
+    Browse Applications
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <br>
+    <br>
+    <h2>Browse Applications</h2>
+
+
+    <?php foreach($browseapplications as $item): ?>
+        <div class="row">
+            <div class="user-post">
+                <p class="post-time"><?php echo date("D d F, Y, g:ia", strtoTime($item->created_at)); ?></p>
+                <h2><?php echo $item->title; ?></h2>
+                <div class="row">
+                    <div class="col span-2-of-3">
+                        <img src="<?php echo $item->img_url; ?>" class="post-image">
+                    </div>
+                    <div class="col span-1-of-3">
+                        <div class="form-group">
+                            <p><?php echo $item->description; ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

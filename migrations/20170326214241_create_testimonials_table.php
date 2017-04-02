@@ -10,6 +10,7 @@ class CreateTestimonialsTable extends AbstractMigration
         $users = $this->table('testimonials');
         $users->addColumn('title', 'string')
             ->addColumn('testimonial', 'text')
+            ->addColumn('img_url', 'text')
             ->addColumn('user_id', 'integer')
             //Get id from users table of poster and when deleted or updated, cascaade
             ->addForeignKey('user_id', 'users', 'id', ['delete' => 'cascade', 'update' => 'cascade'])

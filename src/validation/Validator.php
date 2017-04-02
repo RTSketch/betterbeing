@@ -50,6 +50,16 @@ class Validator
                             }
                             break;
 
+                        case 'unique':
+                            $model = "BetterBeing\\Models\\" . $exploded[1];
+                            $table = new $model;
+                            $results = $table::where($name, '=', $_REQUEST[$name])->get();
+
+                            foreach ($results as $item){
+                                $errors[] = $_REQUEST[$name] . " is already in use!";
+                            }
+                            break;
+                            
                         default:
                             // do nothing
                     }

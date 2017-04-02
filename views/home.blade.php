@@ -57,10 +57,12 @@
         </section>
     
     </div>
+
     <!------------------------------------------>
     <!----------------NAVIGATION---------------->
     <!------------------------------------------>
-    <div class="hide-navigation js--main-nav">
+    <div class="hide-navigation">
+        @yield('errormessage')
         <input class="navigation" id="toggle-nav" type="checkbox" checked>
         <label class="navigation" for="toggle-nav">Navigation</label>
         <div class="navigation" id="expand-nav">
@@ -124,6 +126,8 @@
         </div>
     </div>
     
+
+
     <section class="section-summary">
         <div class="row">
             <div class="col span-1-of-4-collapse-wide box">
@@ -220,16 +224,16 @@
             <!------------------------------------------>
             <!-----------------Row-1-------------------->
             <!------------------------------------------>
-            <div class="row">
+            <div class="row js--row-art-and-design js--scroll-to-this">
                 <div class="col span-1-of-2-step-1">
                     <div class="col span-1-of-2-step-2">
-                        <div class="btn-bigBadge badge-big js--row-art-and-design js--scroll-to-this tooltip2" data-tooltip-content="#tooltip_content"> <i class="ion-paintbrush badge-border"></i> </div>
+                        <div id="art-and-design" class="btn-bigBadge badge-big  tooltip2" data-tooltip-content="#tooltip_content"> <i class="ion-paintbrush badge-border"></i> </div>
                         <h3>Art &amp; Design</h3>
                         <!------------------------------------>
                         <!------------ART-&-DESIGN------------>
                         <!------------------------------------>
                         <div class="badges-small"> 
-                            <span class="btn-badge badge-small tooltip2 js--scroll-to-this" data-tooltip-content="#tooltip_content">
+                            <span class="btn-badge badge-small tooltip2 js--scroll-to-this" data-tooltip-content="#tooltip_painting">
                                 <i class="ion-paintbrush badge-border"></i>
                             </span> 
                             <span class="btn-badge badge-small tooltip2 js--scroll-to-this" data-tooltip-content="#tooltip_content">

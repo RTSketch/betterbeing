@@ -1,0 +1,57 @@
+
+
+        <?php $__env->startSection('browsertitle'); ?>
+            Better Being: Add Testimonial
+        <?php $__env->stopSection(); ?>
+        
+        <?php $__env->startSection('content'); ?>
+        <section class ="sticky-prompt"></section>
+        <section class ="section-form">
+            <div class="row">
+                <h2>Add Testimonial</h2>
+                
+            </div>
+            <div class="row medium-row">
+                <?php echo $__env->yieldContent('errormessage'); ?>
+                <form method="post" id="testimonialform" name="testimonialform" class="register-form"
+                    action="/add-testimonial" novalidate>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="title" id="title" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="testimonial">Testimonial</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="testimonial" id="testimonial" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+
+
+                </form>
+
+            </div>
+        </section>
+        <?php $__env->stopSection(); ?>
+
+        <?php $__env->startSection('bottomjs'); ?>
+
+        <script>
+
+            $(document).ready(function() {
+                
+               $("#testimonialform").validate();
+
+            }); 
+
+        </script>
+        <?php $__env->stopSection(); ?>
+<?php echo $__env->make('base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
